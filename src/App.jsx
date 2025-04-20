@@ -119,7 +119,7 @@ function App() {
         stress_level: parseFloat(stressLevel),
       };
 
-      const response = await axios.post('https://aquatic-brash-starburst.glitch.me/predict/', body);
+      const response = await axios.post('https://aquatic-brash-starburst.glitch.me/predict/'||'http://localhost:3001/predict', body);
       setResult(response.data);
     } catch (error) {
       console.error('Prediction error:', error);
